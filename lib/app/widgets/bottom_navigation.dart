@@ -26,10 +26,10 @@ class BottomNavigation extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          PlatformSvg.asset(CARDS, width: 30, height: 30),
-          PlatformSvg.asset(FIRE, width: 40, height: 40),
-          PlatformSvg.asset(CHAT, width: 40, height: 40),
-          PlatformSvg.asset(USER, width: 40, height: 40),
+          PlatformSvg.asset(CARDS, width: 40, height: 40),
+          PlatformSvg.asset(FIRE, width: 52, height: 52),
+          PlatformSvg.asset(CHAT, width: 52, height: 52),
+          PlatformSvg.asset(USER, width: 48, height: 48),
         ],
       ),
     );

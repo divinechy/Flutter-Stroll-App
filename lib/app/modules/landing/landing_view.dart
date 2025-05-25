@@ -34,7 +34,7 @@ class LandingView extends GetView<LandingController> {
               top: 0,
               left: 0,
               right: 0,
-              height: media.height * 0.60,
+              height: media.height * 0.55,
               child: ShaderMask(
                 shaderCallback: (Rect bounds) {
                   return const LinearGradient(
@@ -54,7 +54,6 @@ class LandingView extends GetView<LandingController> {
                 children: [
                   SizedBox(height: media.height * 0.03),
                   Header(),
-                  SizedBox(height: media.height * 0.25),
                   Content(),
                 ],
               ),

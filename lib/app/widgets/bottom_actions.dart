@@ -19,16 +19,16 @@ class BottomActions extends StatelessWidget {
             Text(
               'Pick your option.',
               style: TextStyle(
-                color: Colors.white,
-                fontSize: 16,
-                fontWeight: FontWeight.w500,
+                color: Color(0xFFE5E5E5),
+                fontSize: 14,
+                fontWeight: FontWeight.w400,
               ),
             ),
             Text(
               'See who has a similar mind.',
               style: TextStyle(
-                color: Colors.white.withOpacity(0.8),
-                fontSize: 16,
+                color: Color(0xFFE5E5E5),
+                fontSize: 14,
                 fontWeight: FontWeight.w400,
               ),
             ),
@@ -36,28 +36,16 @@ class BottomActions extends StatelessWidget {
         ),
         Row(
           children: [
-            Container(
+            PlatformSvg.asset(
+              MIC,
               width: 56,
               height: 56,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                border: Border.all(color: Colors.transparent, width: 2),
-              ),
-              child: PlatformSvg.asset(
-                MIC,
-              ).paddingOnly(right: 12),
-            ),
-            Container(
-              width: 48,
-              height: 48,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: Colors.transparent,
-              ),
-              child: PlatformSvg.asset(
-                FORWARD,
-              ).paddingOnly(right: 4),
-            ),
+            ).paddingOnly(right: 12),
+            PlatformSvg.asset(
+              FORWARD,
+              width: 56,
+              height: 56,
+            ).paddingOnly(right: 4),
           ],
         ),
       ],

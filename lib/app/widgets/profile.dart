@@ -6,43 +6,48 @@ class Profile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final media = MediaQuery.of(context).size;
     return SizedBox(
+      height: media.height * 0.10,
       child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            width: 60,
-            height: 60,
+            width: media.width * 0.16,
+            height: media.height * 0.07,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
               image: DecorationImage(
                 image: AssetImage(ACTOR),
                 fit: BoxFit.cover,
               ),
+              border: Border.all(color: Colors.black, width: 2),
             ),
           ),
           SizedBox(width: 16),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                SizedBox(height: 20),
                 Text(
                   'Angelina, 28',
                   style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 18,
-                    fontWeight: FontWeight.w600,
+                    color: Color(0xFFF5F5F5),
+                    fontSize: 14,
+                    fontWeight: FontWeight.w700,
                   ),
+                  overflow: TextOverflow.ellipsis,
+                  maxLines: 1,
                 ),
-                SizedBox(height: 10),
+                SizedBox(height: 4),
                 Text(
                   'What is your favorite time\n of the day?',
                   style: TextStyle(
-                    color: Colors.white,
+                    color: Color(0xFFF5F5F5),
                     fontSize: 20,
                     fontWeight: FontWeight.w700,
-                    height: 1.5,
+                    height: 1.2,
                   ),
                   overflow: TextOverflow.ellipsis,
                   maxLines: 2,

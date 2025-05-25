@@ -43,15 +43,15 @@ class OptionButton extends StatelessWidget {
                   border:
                       isSelected
                           ? null
-                          : Border.all(color: Colors.white, width: 2),
+                          : Border.all(color: Color(0xFFC4C4C4), width: 2),
                 ),
                 child: Center(
                   child: Text(
                     letter,
-                    style: const TextStyle(
-                      color: Colors.white,
+                    style: TextStyle(
+                      color: isSelected ? Colors.white : Color(0xFFC4C4C4),
                       fontSize: 16,
-                      fontWeight: FontWeight.w600,
+                      fontWeight: FontWeight.w400,
                     ),
                   ),
                 ),
@@ -61,9 +61,9 @@ class OptionButton extends StatelessWidget {
                 child: Text(
                   text,
                   style: const TextStyle(
-                    color: Colors.white,
+                    color: Color(0xFFC4C4C4),
                     fontSize: 14,
-                    fontWeight: FontWeight.w500,
+                    fontWeight: FontWeight.w400,
                     height: 1.3,
                   ),
                   maxLines: 2, // Limit to 2 lines

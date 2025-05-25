@@ -1,6 +1,7 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:stroll_app/app/widgets/bottom_actions.dart';
 import 'package:stroll_app/app/widgets/options.dart';
 import 'package:stroll_app/app/widgets/profile.dart';
@@ -10,28 +11,27 @@ class Content extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final media = MediaQuery.of(context).size;
     return Padding(
-      padding: EdgeInsets.all(20),
+      padding: EdgeInsets.fromLTRB(16, media.height * 0.35, 16, 16),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisSize: MainAxisSize.min,
         children: [
           Profile(),
-          SizedBox(height: 24),
           Padding(
-            padding: const EdgeInsets.only(top: 16.0, left: 16.0),
+            padding: const EdgeInsets.only(left: 32.0, bottom: 16.0),
             child: Text(
               '"Mine is definitely the peace in the morning."',
               style: TextStyle(
-                color: Colors.white.withOpacity(0.8),
-                fontSize: 16,
+                color: Color(0xFFCBC9FF),
+                fontSize: 14,
                 fontStyle: FontStyle.italic,
                 fontWeight: FontWeight.w400,
               ),
             ),
           ),
-          SizedBox(height: 32),
-          Options(),
-          SizedBox(height: 24),
+          Options().paddingOnly(bottom: 20.0),
           BottomActions(),
         ],
       ),

@@ -52,23 +52,23 @@ class Header extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            PlatformSvg.asset(WATCH, color: Colors.white).paddingOnly(right: 4),
+            PlatformSvg.asset(WATCH, width: 15, height: 15, color: Colors.white).paddingOnly(right: 4),
             Text(
               '22h 00m',
               style: TextStyle(
                 fontSize: 14,
                 color: Colors.white,
-                fontWeight: FontWeight.w600,
+                fontWeight: FontWeight.w700,
               ),
             ),
             SizedBox(width: 12),
-            PlatformSvg.asset(SMALL, color: Colors.white).paddingOnly(right: 4),
+            PlatformSvg.asset(SMALL, width: 15, height: 15, color: Colors.white).paddingOnly(right: 4),
             Text(
               '103',
               style: TextStyle(
                 fontSize: 14,
                 color: Colors.white,
-                fontWeight: FontWeight.w600,
+                fontWeight: FontWeight.w700,
               ),
             ),
           ],
