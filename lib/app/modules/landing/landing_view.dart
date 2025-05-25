@@ -1,8 +1,10 @@
-// ignore_for_file: deprecated_member_use
+// ignore_for_file: deprecated_member_use, unused_local_variable
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:stroll_app/app/theme/images.dart';
+import 'package:stroll_app/app/widgets/bottom_navigation.dart';
+import 'package:stroll_app/app/widgets/content.dart';
 import 'package:stroll_app/app/widgets/header.dart';
 import 'landing_controller.dart';
 
@@ -12,9 +14,9 @@ class LandingView extends GetView<LandingController> {
   @override
   Widget build(BuildContext context) {
     final media = MediaQuery.of(context).size;
+    final LandingController controller = Get.find<LandingController>();
 
     return Scaffold(
-      backgroundColor: Colors.black,
       body: Container(
         width: double.infinity,
         height: double.infinity,
@@ -22,7 +24,7 @@ class LandingView extends GetView<LandingController> {
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
-            colors: [Colors.white, Color(0xFF090B0D), Color(0xFF000000)],
+            colors: [Colors.white, Color(0xFF090B0D), Color(0xFF101115)],
             stops: [0.0, 0.6, 1.0],
           ),
         ),
@@ -43,21 +45,21 @@ class LandingView extends GetView<LandingController> {
                   ).createShader(bounds);
                 },
                 blendMode: BlendMode.dstIn, // Keeps image, applies transparency
-                child: Image.asset(background, fit: BoxFit.cover),
+                child: Image.asset(BACKGROUND, fit: BoxFit.cover),
               ),
             ),
 
             SafeArea(
               child: Column(
                 children: [
-                  //StatusBarWidget(),
                   SizedBox(height: media.height * 0.03),
                   Header(),
-                  Spacer(),
-                  //ContentSectionWidget(controller: controller),
+                  SizedBox(height: media.height * 0.25),
+                  Content(),
                 ],
               ),
             ),
+            Positioned(bottom: 0, left: 0, right: 0, child: BottomNavigation()),
           ],
         ),
       ),
