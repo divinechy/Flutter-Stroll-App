@@ -7,7 +7,6 @@ class Profile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 150, // 👈 definite height for the row
       child: Row(
         children: [
           Container(
